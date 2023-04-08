@@ -31,8 +31,6 @@ public class StudentService {
 				
 				ch=sc.nextInt();
 				
-				StudentService ss = new StudentService();
-				
 				switch (ch) {
 					case 1:
 					StudentService.access(sc, doa);
