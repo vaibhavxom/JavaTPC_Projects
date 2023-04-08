@@ -34,28 +34,27 @@ public class StudentService {
 				StudentService ss = new StudentService();
 				
 				switch (ch) {
-				case 1:
-					sc.next();
-					ss.access(sc, doa);
+					case 1:
+					StudentService.access(sc, doa);
 					
 					
 					break;
 				case 2:
-						sc.next();
-						ss.insert(sc, doa);
+						
+						StudentService.insert(sc, doa);
 						
 						break;
 				case 3:
-					sc.next();
-					ss.update(sc, doa);
+					
+					StudentService.update(sc, doa);
 					
 					break;
 				case 4:
-					sc.next();
-					ss.delete(sc, doa);
+					
+					StudentService.delete(sc, doa);
 					break;
 				case 5:
-					ss.getAll(doa);
+					StudentService.getAll(doa);
 					break;
 				
 				}	
@@ -77,7 +76,7 @@ public class StudentService {
 				//getAll(doa);
 			*/
 			
-			 void access(Scanner sc,StudentDOA dao){
+			static void access(Scanner sc,StudentDOA dao){
 				int Id;
 				
 				System.out.println("enter  employee id : ");
@@ -106,7 +105,7 @@ public class StudentService {
 
 			}
 			
-			 void insert(Scanner sc,StudentDOA doa ) {
+			 static void insert(Scanner sc,StudentDOA doa ) {
 					
 					System.out.println("enter Student Id : ");
 					int Id = sc.nextInt();
@@ -132,7 +131,7 @@ public class StudentService {
 					}
 			}
 			
-			  void update(Scanner sc,StudentDOA doa ) {
+			 static void update(Scanner sc,StudentDOA doa ) {
 					
 					System.out.println("enter Student Id to update : ");
 					int Id=sc.nextInt();
@@ -158,7 +157,7 @@ public class StudentService {
 					}
 			}
 			 
-			  void delete(Scanner sc,StudentDOA doa ) {
+			  static void delete(Scanner sc,StudentDOA doa ) {
 					
 					System.out.println("enter Student Id to update : ");
 					int Id =sc.nextInt();			
@@ -179,7 +178,7 @@ public class StudentService {
 					}
 			}
 			 
-			  void getAll(StudentDOA doa)
+			  static void getAll(StudentDOA doa)
 			 {
 				 try {
 					List<Student> emplist = doa.getAllStudent();
